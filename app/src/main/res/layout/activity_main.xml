@@ -36,7 +36,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/ed1"
+        android:id="@+id/et1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -44,7 +44,7 @@
         android:inputType="number"/>
 
     <EditText
-        android:id="@+id/ed2"
+        android:id="@+id/et2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -65,6 +65,14 @@
         android:layout_height="wrap_content"
         android:onClick="ome1"
         android:text="מסך הבא" />
+
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ome2"
+        android:text="קרדיטים"/>
 
 
 </LinearLayout>

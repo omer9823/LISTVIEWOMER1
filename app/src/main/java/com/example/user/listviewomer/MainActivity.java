@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     EditText et2;
     Button btn1;
     int a;
+    boolean bo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,30 +33,30 @@ public class MainActivity extends AppCompatActivity {
 
         if (rb1.isChecked()){
 
-            a=1;
+            bo=true;
 
             String st1 = et1.getText().toString();
             int b = Integer.parseInt(st1);
-            String st2 = et1.getText().toString();
+            String st2 = et2.getText().toString();
             int c = Integer.parseInt(st2);
 
             Intent t=new Intent(this, Main2Activity.class);
-            t.putExtra("n",a);
+            t.putExtra("n",bo);
             t.putExtra("nn",b);
             t.putExtra("nnn",c);
         }
 
         else if (rb2.isChecked()){
 
-            a=2;
+            bo=false;
 
             String st1 = et1.getText().toString();
             int b = Integer.parseInt(st1);
-            String st2 = et1.getText().toString();
+            String st2 = et2.getText().toString();
             int c = Integer.parseInt(st2);
 
             Intent t=new Intent(this, Main2Activity.class);
-            t.putExtra("n",a);
+            t.putExtra("n",bo);
             t.putExtra("nn",b);
             t.putExtra("nnn",c);
         }
@@ -63,11 +64,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onClick(View view){
+    public void ome1(View view){
         Intent t=new Intent(this, Main2Activity.class);
         startActivity(t);
         finish();
     }
+
+    public void ome2(View view) {
+        Intent t = new Intent(this, Main3Activity.class);
+        startActivity(t);
+        finish();
+    }
+
 
 }
 
